@@ -7,11 +7,12 @@
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     height: 10vh;
     background-color:lightskyblue;
     font-family: sans-serif;
+    padding : 10px;
 }
 
 .navlinks {
@@ -32,11 +33,12 @@ nav {
 }
 
 .navlinks a {
-    color: orangered ;
+    color: rgb(0, 0, 0) ;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 20px;
+
 }
 .burger div {
     width: 25px;
@@ -44,6 +46,7 @@ nav {
     background-color: palegoldenrod;
     margin: 5px;
     border-radius: 10%;
+
 }
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
@@ -56,4 +59,13 @@ nav {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+.navActive {
+    transform: translateY(100vh);
+}
 
+#wrapper {
+    width: 90px;
+    border: solid 1px black;
+    min-height: 100vh;
+
+}
