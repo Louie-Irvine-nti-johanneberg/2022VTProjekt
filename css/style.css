@@ -96,7 +96,7 @@ nav {
 .navActive {
     transform: translateY(106.5vh);
 }
-.home a {
+.selected a {
     color:white;
 }
 #wrapper {
@@ -158,6 +158,14 @@ nav {
     padding:5px;
 }
 /*PARTS SPECIFIC*/
+.partsmain {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    height: none;
+}
 .categorysection {
     background-color: red;
     width: 20vw;
@@ -169,6 +177,62 @@ nav {
     justify-content: space-evenly;
     height: 90%;
 }
+.items {
+    display: grid;
+    grid-template-areas:
+    'sh sh sh'
+    'i1 i2 i3'
+    'i4 i5 i6';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 50vw;
+    height: 50vh;
+}
+#item1 {
+    grid-area: i1;
+}
+#item2{
+    grid-area: i2;
+}
+#item3{
+    grid-area: i3;
+}
+#item4{
+    grid-area: i4;
+}
+#item5{
+    grid-area: i5;
+}
+#item6{
+    grid-area: i6;
+}
+.searchbar {
+    grid-area: sh;
+}
+.item {
+    background-color: rgb(156, 156, 156);
+}
+/*gallery specific*/
+
+.albumcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-evenly;
+
+}
+.apicture {
+    background-color: skyblue;
+    width: 200px;
+    height: 200px;
+}
+#ap1{
+    background-image: url(../img/Ducati\ F07.jpg);
+    background-size: 100%;
+}
+
 @media screen and (max-width:700px){
     .navActive {
         transform: translateY(115vh);
@@ -184,6 +248,7 @@ nav {
         width: 90vw;
         height: 30vh;
     }
+
     .showcase {
         grid-template-areas: 
         'ti'
@@ -195,6 +260,16 @@ nav {
         gap:20vh;
     }
     .commentsection {
+        width: 90vw;
+    }
+    .partsmain {
+        flex-direction: column-reverse;
+        height: 110vh;
+    }
+    .items {
+        width: 90vw;
+    }
+    .categorysection{
         width: 90vw;
     }
 }
