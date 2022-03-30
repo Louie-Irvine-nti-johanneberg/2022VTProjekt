@@ -4,7 +4,40 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+header {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerlist {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 50vw;
+}
+.headerlist li {
+    list-style-type: none;
+}
+.headerlist li p {
+    font-size: 20px;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+}
+.profilepic {
+    background-image: url(../img/Logo.png);
+    height: 100px;
+    width: 100px;
+}
+.logo {
+    background-image: url(../img/Logo.png);
+    height: 100px;
+    width: 100px;
+    background-size: 100%;
+}
 nav {
     display: flex;
     justify-content: right;
@@ -12,18 +45,21 @@ nav {
     height: 10vh;
     font-family: sans-serif;
     padding : 10px;
+    grid-area: na;
 }
 
 .navlinks {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     position: absolute;
-    right: 0px;
-    height: 90vh;
+    right: 0vh;
+    height: 10vh;
+    width: 100vw;
     top: -90vh;
     align-items: center;
-    width: 20%;
+    background-color:red ;
+    transition:all 0.5s ease;
 }
 
 .navlinks {
@@ -58,50 +94,48 @@ nav {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 .navActive {
-    transform: translateY(100vh);
+    transform: translateY(106.5vh);
 }
-
+.home a {
+    color:white;
+}
 #wrapper {
-    display:grid;
-    width: 90vh;
     border: solid 1px black;
     min-height: 100vh;
-    margin: auto;
+    margin: auto;;    
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.showcase {
+    display: grid;
     grid-template-areas: 
-    'hd hd hd'
-    'nv s1 s2'
-    'nv s1 s2'
-    'nv s3 s3'
-    'ft ft ft'
-    ;
-   
-     
+    'ti p'
+    'sb p';
+    width: 60vw;
 }
-header{ 
-    grid-area: hd;
-    background-color: aquamarine;
+.title {
+    grid-area: ti;
 }
-nav{
-    grid-area: nv;
-    
-    
+.subtext {
+    grid-area: sb;
 }
-#sec1 {
-    grid-area: s1;
-    background-color: chartreuse;
+.picture1 {
+    background-image: url(../img/Ducati\ F07.jpg);
+    width: 40vw;
+    height: 40vh;
+    background-size: 100%;
+    grid-area: p;
 }
-
-#sec2 {
-    grid-area: s2;
-    background-color: coral;
-}
-
-#sec3 {
-    grid-area: s3;
-    background-color: darkkhaki;
-}
-
-footer{
-    grid-area: ft;
-    background-color: cornflowerblue;
+@media screen and (max-width:700px){
+    .headerlist li p {
+        font-size: 0px;
+    }
+    .showcase {
+        grid-template-areas: 
+        'ti'
+        'p'
+        'sb';
+    }
 }
