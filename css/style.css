@@ -114,12 +114,18 @@ nav {
     'ti p'
     'sb p';
     width: 60vw;
+    height: 50vh;
+    justify-content: space-evenly;
 }
 .title {
     grid-area: ti;
 }
 .subtext {
     grid-area: sb;
+}
+.package {
+    display: flex;
+    flex-direction: row;
 }
 .picture1 {
     background-image: url(../img/Ducati\ F07.jpg);
@@ -128,14 +134,56 @@ nav {
     background-size: 100%;
     grid-area: p;
 }
+.picture2 {
+    background-image:url(../img/Ducati\ 916.jpg);
+    width: 40vw;
+    height: 40vh;
+    background-size:100%;
+    grid-area: p;
+}
+.commentitle {
+    background-color: rgb(156, 156, 156);
+}
+.pfp {
+    background-image: url(../img/Logo.png);
+    height: 50px;
+    width: 50px;
+}
+.commentsection {
+    background-color:gainsboro;
+    height: 40vh;
+    width: 20vw;
+}
+.comment {
+    display: flex;
+    padding:5px;
+}
 @media screen and (max-width:700px){
+    .navActive {
+        transform: translateY(115vh);
+    }
     .headerlist li p {
         font-size: 0px;
+    }
+    .picture1 {
+        width: 90vw;
+        height: 30vh;
+    }
+    .picture2 {
+        width: 90vw;
+        height: 30vh;
     }
     .showcase {
         grid-template-areas: 
         'ti'
         'p'
         'sb';
+    }
+    .package {
+        flex-direction: column;
+        gap:20vh;
+    }
+    .commentsection {
+        width: 90vw;
     }
 }
