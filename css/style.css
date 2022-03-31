@@ -225,13 +225,28 @@ nav {
 }
 .apicture {
     background-color: skyblue;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 155px;
 }
 #ap1{
-    background-image: url(../img/Ducati\ F07.jpg);
-    background-size: 100%;
+    background-image: url(../img/New\ F07.jpg);
+    background-size: cover;
+   
 }
+#ap2 {
+    background-image: url(../img/Ducati\ F97.jpg);
+    background-size: cover;
+}
+#ap3{
+    background-image: url(../img/Ducati\ 996rs.jpg);
+    background-size: cover;
+}
+#ap4 {
+    background-image: url(../img/Ducati\ 999RS.jpg);
+    background-size: cover;
+
+}
+
 
 @media screen and (max-width:700px){
     .navActive {
